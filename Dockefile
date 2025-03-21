@@ -1,0 +1,7 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+RUN npm install -g postman-to-openapi
+
+CMD ["p2o", "--help"]
