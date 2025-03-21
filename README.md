@@ -46,6 +46,35 @@ To install as a `cli` just
 npm i postman-to-openapi -g
 ```
 
+### With Docker
+This repository provides a Docker container to run `postman-to-openapi`
+
+#### 📦 Installation  
+
+To build the Docker image, run:  
+
+```sh
+docker build -t postman-to-openapi .
+```
+
+#### Docker Usage
+
+Run the container with the following command:
+
+```sh
+docker run --rm -v $(pwd):/app postman-to-openapi p2o [COMMAND]
+```
+
+by default , shows help
+```sh
+docker rm -v $(pwd):/app postman-to-openapi
+```
+
+Example
+```sh
+docker run --rm -v $(pwd):/app postman-to-openapi p2o ./input.json -f ./output.yml
+```
+
 ## Quick Usage
 
 As a library
